@@ -1,0 +1,17 @@
+{
+	"name": "ar-test",
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "vite --host",
+		"build": "tsc && vite build",
+		"tailwind": "npx tailwindcss -i ./src/style.css -o ./assets/tailwind.css --watch",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"typescript": "^4.4.4",
+		"vite": "^2.7.2"
+	},
+	"dependencies": {
+		"tailwindcss": "^3.0.18"
+	}
+}
