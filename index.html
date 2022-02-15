@@ -12,9 +12,14 @@
 		<title>Vite App</title>
 	</head>
 	<body
-		class="bg-mWhite h-screen w-screen flex flex-col items-center justify-center relative"
+		class="bg-mWhite h-screen w-screen flex flex-col items-center justify-center relative overflow-hidden"
+		style="
+			background: url(/assets/ar-bg.jpg);
+			background-position: center;
+			background-size: cover;
+		"
 	>
-		<img
+		<!-- <img
 			src="/assets/site/dots.svg"
 			alt="Dots"
 			class="absolute left-0 bottom-0"
@@ -23,21 +28,39 @@
 			class="w-auto h-24 z-10"
 			src="/assets/site/logo.svg"
 			alt="Rodrigo García"
-		/>
+		/> -->
 		<!-- <div id="app"></div> -->
 		<div
-			class="container mx-auto px-10 mt-10 flex items-center justify-center"
+			class="container mx-auto px-10 mt-10 flex items-center justify-center max-w-lg relative"
 		>
 			<model-viewer
-				class="w-full sm:w-8/12 md:w-6/12 h-64 bg-mGray rounded-md"
+				class="w-64 h-64 bg-transparent rounded-md relative"
 				src="/assets/Trono_AdidasPredator.glb"
-				poster="/assets/Akla_01-scaled.jpg"
+				poster="/assets/model-screenshot.jpg"
 				shadow-intensity="1"
 				ar
 				ar-modes="webxr scene-viewer quick-look"
 				camera-controls
 				alt="A 3D model carousel"
-			></model-viewer>
+			>
+				<button
+					type="button"
+					slot="ar-button"
+					style="
+						color: white;
+						position: absolute;
+						left: 50%;
+						bottom: 10px;
+						transform: translateX(-50%);
+						background: #042f4a;
+						padding: 4px 8px;
+						text-align: center;
+						border-radius: 5px;
+					"
+				>
+					Activar Cámara
+				</button>
+			</model-viewer>
 		</div>
 		<script type="module" src="/src/main.ts"></script>
 	</body>
